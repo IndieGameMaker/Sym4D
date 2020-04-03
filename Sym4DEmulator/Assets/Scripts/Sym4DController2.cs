@@ -10,8 +10,13 @@ public class Sym4DController2 : MonoBehaviour
 
     private WaitForSeconds ws = new WaitForSeconds(0.5f);
 
+    public void OnInit()
+    {
+        StartCoroutine(Init());
+    }
+
     //포트 번호 초기화 및 기본 테스트
-    IEnumerator OnInit()
+    IEnumerator Init()
     {
         //포트번호 설정
         xPort = Sym.Sym4D_X_Find();
